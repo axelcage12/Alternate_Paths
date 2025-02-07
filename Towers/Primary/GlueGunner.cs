@@ -70,7 +70,7 @@ public class GlueMine : UpgradePlusPlus<GlueGunnerAltPath>
         if (towerModel.appliedUpgrades.Contains(UpgradeType.TheBloonSolver))
         {
             var glue = Game.instance.model.GetTowerFromId("GlueGunner-500").GetAttackModel().weapons[0].projectile.GetBehavior<SlowModel>().Duplicate();
-            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false);
+            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false, 1);
             trap.weapons[0].projectile.ApplyDisplay<GlueTrapGreen>();
 
             bomb.AddBehavior(slowModel);
@@ -79,7 +79,7 @@ public class GlueMine : UpgradePlusPlus<GlueGunnerAltPath>
         else if (towerModel.appliedUpgrades.Contains(UpgradeType.BloonLiquefier))
         {
             var glue = Game.instance.model.GetTowerFromId("GlueGunner-400").GetAttackModel().weapons[0].projectile.GetBehavior<SlowModel>().Duplicate();
-            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false);
+            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false, 1);
             trap.weapons[0].projectile.ApplyDisplay<GlueTrapGreen>();
 
             bomb.AddBehavior(slowModel);
@@ -88,7 +88,7 @@ public class GlueMine : UpgradePlusPlus<GlueGunnerAltPath>
         else if (towerModel.appliedUpgrades.Contains(UpgradeType.BloonDissolver))
         {
             var glue = Game.instance.model.GetTowerFromId("GlueGunner-300").GetAttackModel().weapons[0].projectile.GetBehavior<SlowModel>().Duplicate();
-            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false);
+            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false, 1);
             trap.weapons[0].projectile.ApplyDisplay<GlueTrapGreen>();
 
             bomb.AddBehavior(slowModel);
@@ -97,7 +97,7 @@ public class GlueMine : UpgradePlusPlus<GlueGunnerAltPath>
         else if (towerModel.appliedUpgrades.Contains(UpgradeType.CorrosiveGlue))
         {
             var glue = Game.instance.model.GetTowerFromId("GlueGunner-200").GetAttackModel().weapons[0].projectile.GetBehavior<SlowModel>().Duplicate();
-            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false);
+            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false, 1);
             trap.weapons[0].projectile.ApplyDisplay<GlueTrapYellow>();
 
             bomb.AddBehavior(slowModel);
@@ -106,7 +106,7 @@ public class GlueMine : UpgradePlusPlus<GlueGunnerAltPath>
         else if (towerModel.appliedUpgrades.Contains(UpgradeType.GlueSoak))
         {
             var glue = Game.instance.model.GetTowerFromId("GlueGunner-100").GetAttackModel().weapons[0].projectile.GetBehavior<SlowModel>().Duplicate();
-            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false);
+            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false, 1);
             trap.weapons[0].projectile.ApplyDisplay<GlueTrapYellow>();
 
             bomb.AddBehavior(slowModel);
@@ -114,7 +114,7 @@ public class GlueMine : UpgradePlusPlus<GlueGunnerAltPath>
         else if (towerModel.appliedUpgrades.Contains(UpgradeType.SuperGlue))
         {
             var glue = Game.instance.model.GetTowerFromId("GlueGunner-005").GetAttackModel().weapons[0].projectile.GetBehavior<SlowModel>().Duplicate();
-            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false);
+            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false, 1);
             trap.weapons[0].projectile.ApplyDisplay<GlueTrapPink>();
 
             bomb.AddBehavior(Game.instance.model.GetTowerFromId("GlueGunner-005").GetAttackModel().weapons[0].projectile.GetBehavior<AddBehaviorToBloonModel>().Duplicate());
@@ -123,7 +123,7 @@ public class GlueMine : UpgradePlusPlus<GlueGunnerAltPath>
         else if (towerModel.appliedUpgrades.Contains(UpgradeType.RelentlessGlue))
         {
             var glue = Game.instance.model.GetTowerFromId("GlueGunner-004").GetAttackModel().weapons[0].projectile.GetBehavior<SlowModel>().Duplicate();
-            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false);
+            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false, 1);
             trap.weapons[0].projectile.ApplyDisplay<GlueTrapPink>();
 
             bomb.AddBehavior(Game.instance.model.GetTowerFromId("GlueGunner-004").GetAttackModel().weapons[0].projectile.GetBehavior<AddBehaviorToBloonModel>().Duplicate());
@@ -132,7 +132,7 @@ public class GlueMine : UpgradePlusPlus<GlueGunnerAltPath>
         else if (towerModel.appliedUpgrades.Contains(UpgradeType.MOABGlue))
         {
             var glue = Game.instance.model.GetTowerFromId("GlueGunner-003").GetAttackModel().weapons[0].projectile.GetBehavior<SlowModel>().Duplicate();
-            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false);
+            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false, 1);
             trap.weapons[0].projectile.ApplyDisplay<GlueTrapPink>();
 
             bomb.AddBehavior(slowModel);
@@ -140,7 +140,7 @@ public class GlueMine : UpgradePlusPlus<GlueGunnerAltPath>
         else if (towerModel.appliedUpgrades.Contains(UpgradeType.StrongerGlue))
         {
             var glue = Game.instance.model.GetTowerFromId("GlueGunner-002").GetAttackModel().weapons[0].projectile.GetBehavior<SlowModel>().Duplicate();
-            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false);
+            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false, 1);
             trap.weapons[0].projectile.ApplyDisplay<GlueTrapYellow>();
 
             bomb.AddBehavior(slowModel);
@@ -148,7 +148,7 @@ public class GlueMine : UpgradePlusPlus<GlueGunnerAltPath>
         else if (towerModel.appliedUpgrades.Contains(UpgradeType.StickierGlue))
         {
             var glue = Game.instance.model.GetTowerFromId("GlueGunner-001").GetAttackModel().weapons[0].projectile.GetBehavior<SlowModel>().Duplicate();
-            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false);
+            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", glue.layers, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false, 1);
             trap.weapons[0].projectile.ApplyDisplay<GlueTrapYellow>();
 
             bomb.AddBehavior(slowModel);
@@ -156,7 +156,7 @@ public class GlueMine : UpgradePlusPlus<GlueGunnerAltPath>
         else
         {
             var glue = Game.instance.model.GetTowerFromId("GlueGunner-100").GetAttackModel().weapons[0].projectile.GetBehavior<SlowModel>().Duplicate();
-            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", 3, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false);
+            var slowModel = new SlowModel("SlowModel_", glue.multiplier, glue.lifespan, "TrapSlow", 3, glue.overlayType, glue.isUnique, glue.dontRefreshDuration, glue.effectModel, true, false, false, 1);
             trap.weapons[0].projectile.ApplyDisplay<GlueTrapYellow>();
 
             bomb.AddBehavior(slowModel);
@@ -221,7 +221,7 @@ public class AcidGun : UpgradePlusPlus<GlueGunnerAltPath>
 
 
         var slow = Game.instance.model.GetTowerFromId("GlueGunner-100").GetAttackModel().weapons[0].projectile.GetBehavior<SlowModel>().Duplicate();
-        var slowModel = new SlowModel("SlowModel_", slow.multiplier, slow.lifespan, "AcidSlow", 3, overlay, slow.isUnique, slow.dontRefreshDuration, slow.effectModel, true, false, false);
+        var slowModel = new SlowModel("SlowModel_", slow.multiplier, slow.lifespan, "AcidSlow", 3, overlay, slow.isUnique, slow.dontRefreshDuration, slow.effectModel, true, false, false, 1);
 
 
         if (towerModel.appliedUpgrades.Contains(UpgradeType.GlueSoak))

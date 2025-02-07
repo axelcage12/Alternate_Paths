@@ -31,7 +31,7 @@ public class CrystalShard : UpgradePlusPlus<IceMonkeyAltPath>
         shard.weapons[0].projectile.display = Game.instance.model.GetTower(TowerType.IceMonkey, 0, 0, 5).GetAttackModel().weapons[0].projectile.display;
         shard.weapons[0].projectile.scale /= 1.25f;
         shard.weapons[0].rate /= 1.2f;
-        shard.weapons[0].projectile.AddBehavior(new SlowModel("SlowModel_", .7f, 3f, "ShardSlow", 9999999, "", true, false, null, true, false, false));
+        shard.weapons[0].projectile.AddBehavior(new SlowModel("SlowModel_", .7f, 3f, "ShardSlow", 9999999, "", true, false, null, true, false, false, 1));
         shard.weapons[0].projectile.collisionPasses = new int[] { 0, -1 };
 
         towerModel.GetAttackModel().RemoveBehavior<TargetCloseModel>();
@@ -79,7 +79,7 @@ public class Frostbite : UpgradePlusPlus<IceMonkeyAltPath>
                 {
                     attack.weapons[0].projectile.GetDamageModel().damage += 1;
                     attack.weapons[0].projectile.RemoveBehavior<SlowModel>();
-                    attack.weapons[0].projectile.AddBehavior(new FreezeModel("FreezeModel_", 0, 1f, "ShardFreeze", 1, "Ice", true, new GrowBlockModel("GrowBlockModel_"), null, 0, false, false));
+                    attack.weapons[0].projectile.AddBehavior(new FreezeModel("FreezeModel_", 0, 1f, "ShardFreeze", 1, "Ice", true, new GrowBlockModel("GrowBlockModel_"), null, 0, false, false, true));
                     attack.weapons[0].projectile.collisionPasses = new int[] { 0, -1 };
                 }
             }
@@ -176,7 +176,7 @@ public class FrostBreath : UpgradePlusPlus<IceMonkeyAltPath>
         breath.projectile.GetDamageModel().damage = 2;
         breath.projectile.pierce = 3;
 
-        breath.projectile.AddBehavior(new FreezeModel("FreezeModel_", 0, 1f, "BreathFreeze", 999999, "Ice", true, new GrowBlockModel("GrowBlockModel_"), null, 0, false, false));
+        breath.projectile.AddBehavior(new FreezeModel("FreezeModel_", 0, 1f, "BreathFreeze", 999999, "Ice", true, new GrowBlockModel("GrowBlockModel_"), null, 0, false, false, true));
         breath.projectile.collisionPasses = new int[] { 0, -1 };
 
         if (towerModel.appliedUpgrades.Contains(UpgradeType.ColdSnap)) 
@@ -245,7 +245,7 @@ public class PolarVortex : UpgradePlusPlus<IceMonkeyAltPath>
         icicleDamage.weapons[0].projectile.pierce *= 3;
         icicleDamage.range = 49;
         icicleDamage.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("aaa", "Moabs", 2, 0, false, false) { name = "MoabModifier_" });
-        icicleDamage.weapons[0].projectile.AddBehavior(new FreezeModel("FreezeModel_", 0, 1f, "ShardFreeze", 1, "Ice", true, new GrowBlockModel("GrowBlockModel_"), null, 0, false, false));
+        icicleDamage.weapons[0].projectile.AddBehavior(new FreezeModel("FreezeModel_", 0, 1f, "ShardFreeze", 1, "Ice", true, new GrowBlockModel("GrowBlockModel_"), null, 0, false, false, true));
         icicleDamage.weapons[0].projectile.collisionPasses = new int[] { 0, -1 };
 
         towerModel.AddBehavior(icicleDamage);

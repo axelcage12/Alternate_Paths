@@ -135,12 +135,12 @@ public class HeartofBeast : UpgradePlusPlus<HandlerAltPath>
             if (power <= 2)
             {
                 towerModel.GetAttackModel().weapons[0].projectile.GetDamageModel().damage += 1;
-                towerModel.GetAttackModel().weapons[0].projectile.AddBehavior(new FreezeModel("FreezeModel_", 0, 0.75f, "Stun", 999, "Stun", true, new GrowBlockModel("GrowBlockModel_"), null, 0.75f, true, false));
+                towerModel.GetAttackModel().weapons[0].projectile.AddBehavior(new FreezeModel("FreezeModel_", 0, 0.75f, "Stun", 999, "Stun", true, new GrowBlockModel("GrowBlockModel_"), null, 0.75f, true, false, true));
             }
             else if (power > 2)
             {
                 towerModel.GetAttackModel().weapons[0].projectile.GetDamageModel().damage += 2;
-                towerModel.GetAttackModel().weapons[0].projectile.AddBehavior(new FreezeModel("FreezeModel_", 0, 1.5f, "Stun", 999, "Stun", true, new GrowBlockModel("GrowBlockModel_"), null, 0, false, false));
+                towerModel.GetAttackModel().weapons[0].projectile.AddBehavior(new FreezeModel("FreezeModel_", 0, 1.5f, "Stun", 999, "Stun", true, new GrowBlockModel("GrowBlockModel_"), null, 0, false, false, true));
             }
         }
         else if (towerModel.appliedUpgrades.Contains(UpgradeType.Gyrfalcon))
@@ -225,7 +225,7 @@ public class PrimalLegend : UpgradePlusPlus<HandlerAltPath>
 
 
         wolves.projectile.collisionPasses = new int[] { 0, -1 };
-        wolves.projectile.AddBehavior(new FreezeModel("FreezeModel_", 0, 2.5f, "Stun", 999, "Stun", true, new GrowBlockModel("GrowBlockModel_"), null, 0, false, true));
+        wolves.projectile.AddBehavior(new FreezeModel("FreezeModel_", 0, 2.5f, "Stun", 999, "Stun", true, new GrowBlockModel("GrowBlockModel_"), null, 0, false, true, true));
 
 
         var shard = Game.instance.model.GetTower(TowerType.TackShooter).GetAttackModel().weapons[0].projectile.Duplicate();

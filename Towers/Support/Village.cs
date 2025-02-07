@@ -100,7 +100,7 @@ public class OmegaBeacon : UpgradePlusPlus<VillageAltPath>
         towerModel.GetAttackModel(1).weapons[0].projectile.GetDamageModel().damage *= 3;
         towerModel.GetAttackModel(1).weapons[0].projectile.pierce += 2;
 
-        towerModel.GetAttackModel(1).weapons[0].projectile.AddBehavior(new FreezeModel("FreezeModel_", 0, 1f, "BeaconStun", 999, "Stun", true, new GrowBlockModel("GrowBlockModel_"), null, 0.5f, true, true));
+        towerModel.GetAttackModel(1).weapons[0].projectile.AddBehavior(new FreezeModel("FreezeModel_", 0, 1f, "BeaconStun", 999, "Stun", true, new GrowBlockModel("GrowBlockModel_"), null, 0.5f, true, true, true));
         towerModel.GetAttackModel(1).weapons[0].projectile.collisionPasses = new int[] { 0, -1 };
     }
 }

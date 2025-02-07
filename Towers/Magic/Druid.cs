@@ -22,7 +22,7 @@ public class CrippleThorn : UpgradePlusPlus<DruidAltPath>
 
     public override void ApplyUpgrade(TowerModel towerModel, int tier)
     {
-        towerModel.GetAttackModel().weapons[0].projectile.AddBehavior(new SlowModel("SlowModel_", 0.7f, 3f, "ThornSlow", 9999999, "", true, false, null, true, false, false));
+        towerModel.GetAttackModel().weapons[0].projectile.AddBehavior(new SlowModel("SlowModel_", 0.7f, 3f, "ThornSlow", 9999999, "", true, false, null, true, false, false, 1));
         towerModel.GetAttackModel().weapons[0].projectile.collisionPasses = new int[] { 0, -1 };
     }
 }
